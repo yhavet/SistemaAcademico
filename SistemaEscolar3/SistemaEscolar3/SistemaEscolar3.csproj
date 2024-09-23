@@ -125,5 +125,8 @@
   <ItemGroup>
     <Folder Include="Imagenes\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
