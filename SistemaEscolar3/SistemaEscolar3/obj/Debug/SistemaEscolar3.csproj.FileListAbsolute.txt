@@ -10,3 +10,4 @@ C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debu
 C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.pdb
 C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.FormularioInicioSesion.resources
 C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.MainFormulario.resources
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.PanelDeControlForm.resources
