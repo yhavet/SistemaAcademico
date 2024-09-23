@@ -1,0 +1,15 @@
+# Archivos temporales de Visual Studio
+.vs/
+
+# Archivos de compilación
+bin/
+obj/
+
+# Archivos de configuración del entorno
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de caché
+.DS_Store
