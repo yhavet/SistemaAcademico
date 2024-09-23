@@ -1,0 +1,12 @@
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\bin\Debug\SistemaEscolar3.exe.config
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\bin\Debug\SistemaEscolar3.exe
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\bin\Debug\SistemaEscolar3.pdb
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.csproj.AssemblyReference.cache
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.Form1.resources
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.Properties.Resources.resources
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.csproj.GenerateResource.cache
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.csproj.CoreCompileInputs.cache
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.exe
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.pdb
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.FormularioInicioSesion.resources
+C:\Users\Yhavet\Desktop\SsitemaTecnica3\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.MainFormulario.resources
