@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AñadirEstudiantesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirEstudiantesForm.Designer.cs">
+      <DependentUpon>AñadirEstudiantesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Tecnica3DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AñadirEstudiantesForm.resx">
+      <DependentUpon>AñadirEstudiantesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
