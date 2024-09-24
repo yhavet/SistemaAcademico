@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AñadirDocentesForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AñadirDocentesForm.Designer.cs">
+      <DependentUpon>AñadirDocentesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AñadirEstudiantesForm.cs">
       <SubType>Form</SubType>
     </Compile>
