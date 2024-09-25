@@ -48,6 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.añadirDocentesForm1 = new SistemaEscolar3.AñadirDocentesForm();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -57,6 +58,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -287,11 +289,19 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.añadirDocentesForm1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(289, 28);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(711, 633);
             this.panel3.TabIndex = 2;
+            // 
+            // añadirDocentesForm1
+            // 
+            this.añadirDocentesForm1.Location = new System.Drawing.Point(3, 6);
+            this.añadirDocentesForm1.Name = "añadirDocentesForm1";
+            this.añadirDocentesForm1.Size = new System.Drawing.Size(753, 636);
+            this.añadirDocentesForm1.TabIndex = 0;
             // 
             // MainFormulario
             // 
@@ -315,6 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -340,5 +351,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
+        private AñadirDocentesForm añadirDocentesForm1;
     }
 }

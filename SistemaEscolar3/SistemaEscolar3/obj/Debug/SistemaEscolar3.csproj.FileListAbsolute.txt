@@ -25,3 +25,4 @@ C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEsco
 C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.csproj.CoreCompileInputs.cache
 C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.exe
 C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.pdb
+C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEscolar3\obj\Debug\SistemaEscolar3.AñadirDocentesForm.resources

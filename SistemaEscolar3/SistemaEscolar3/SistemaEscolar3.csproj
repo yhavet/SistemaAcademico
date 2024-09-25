@@ -89,6 +89,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Tecnica3DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AñadirDocentesForm.resx">
+      <DependentUpon>AñadirDocentesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AñadirEstudiantesForm.resx">
       <DependentUpon>AñadirEstudiantesForm.cs</DependentUpon>
     </EmbeddedResource>
