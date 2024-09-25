@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1190, 28);
+            this.panel1.Size = new System.Drawing.Size(1160, 28);
             this.panel1.TabIndex = 0;
             // 
             // label3
@@ -77,7 +77,7 @@
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1130, 6);
+            this.label3.Location = new System.Drawing.Point(1132, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(20, 19);
             this.label3.TabIndex = 1;
@@ -294,21 +294,21 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(289, 28);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(901, 673);
+            this.panel3.Size = new System.Drawing.Size(871, 673);
             this.panel3.TabIndex = 2;
             // 
             // añadirDocentesForm1
             // 
-            this.añadirDocentesForm1.Location = new System.Drawing.Point(6, 6);
+            this.añadirDocentesForm1.Location = new System.Drawing.Point(0, -16);
             this.añadirDocentesForm1.Name = "añadirDocentesForm1";
-            this.añadirDocentesForm1.Size = new System.Drawing.Size(855, 836);
+            this.añadirDocentesForm1.Size = new System.Drawing.Size(865, 741);
             this.añadirDocentesForm1.TabIndex = 0;
             // 
             // MainFormulario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1190, 701);
+            this.ClientSize = new System.Drawing.Size(1160, 701);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

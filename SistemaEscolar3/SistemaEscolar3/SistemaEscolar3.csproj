@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AñadirDatosDocente.cs" />
     <Compile Include="AñadirDocentesForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
