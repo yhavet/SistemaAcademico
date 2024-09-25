@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.status_docente = new System.Windows.Forms.ComboBox();
+            this.btnBorrar_docente = new System.Windows.Forms.Button();
+            this.btnLimpiar_docente = new System.Windows.Forms.Button();
+            this.btnActualizar_Docente = new System.Windows.Forms.Button();
+            this.BtnAñadir_docente = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,13 +50,14 @@
             this.Id_Docente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Datagrid_Docentes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.status_docente = new System.Windows.Forms.ComboBox();
+            this.foto_docente = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Datagrid_Docentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foto_docente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -62,10 +65,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.status_docente);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnBorrar_docente);
+            this.panel2.Controls.Add(this.btnLimpiar_docente);
+            this.panel2.Controls.Add(this.btnActualizar_Docente);
+            this.panel2.Controls.Add(this.BtnAñadir_docente);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label7);
@@ -85,57 +88,77 @@
             this.panel2.Size = new System.Drawing.Size(850, 407);
             this.panel2.TabIndex = 2;
             // 
-            // button4
+            // label8
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(18)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(455, 198);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(115, 31);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Borrar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(494, 61);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "Status";
             // 
-            // button5
+            // status_docente
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(18)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button5.Location = new System.Drawing.Point(317, 198);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(115, 31);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Limpiar";
-            this.button5.UseVisualStyleBackColor = false;
+            this.status_docente.FormattingEnabled = true;
+            this.status_docente.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.status_docente.Location = new System.Drawing.Point(537, 56);
+            this.status_docente.Name = "status_docente";
+            this.status_docente.Size = new System.Drawing.Size(100, 21);
+            this.status_docente.TabIndex = 20;
             // 
-            // button3
+            // btnBorrar_docente
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(18)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(175, 198);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 31);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Actualizar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnBorrar_docente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(18)))));
+            this.btnBorrar_docente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar_docente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar_docente.ForeColor = System.Drawing.Color.White;
+            this.btnBorrar_docente.Location = new System.Drawing.Point(455, 198);
+            this.btnBorrar_docente.Name = "btnBorrar_docente";
+            this.btnBorrar_docente.Size = new System.Drawing.Size(115, 31);
+            this.btnBorrar_docente.TabIndex = 19;
+            this.btnBorrar_docente.Text = "Borrar";
+            this.btnBorrar_docente.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnLimpiar_docente
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(18)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(44, 198);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 31);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Añadir";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnLimpiar_docente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(18)))));
+            this.btnLimpiar_docente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar_docente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar_docente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLimpiar_docente.Location = new System.Drawing.Point(317, 198);
+            this.btnLimpiar_docente.Name = "btnLimpiar_docente";
+            this.btnLimpiar_docente.Size = new System.Drawing.Size(115, 31);
+            this.btnLimpiar_docente.TabIndex = 18;
+            this.btnLimpiar_docente.Text = "Limpiar";
+            this.btnLimpiar_docente.UseVisualStyleBackColor = false;
+            // 
+            // btnActualizar_Docente
+            // 
+            this.btnActualizar_Docente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(18)))));
+            this.btnActualizar_Docente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizar_Docente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar_Docente.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar_Docente.Location = new System.Drawing.Point(175, 198);
+            this.btnActualizar_Docente.Name = "btnActualizar_Docente";
+            this.btnActualizar_Docente.Size = new System.Drawing.Size(115, 31);
+            this.btnActualizar_Docente.TabIndex = 17;
+            this.btnActualizar_Docente.Text = "Actualizar";
+            this.btnActualizar_Docente.UseVisualStyleBackColor = false;
+            // 
+            // BtnAñadir_docente
+            // 
+            this.BtnAñadir_docente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(92)))), ((int)(((byte)(18)))));
+            this.BtnAñadir_docente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnAñadir_docente.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAñadir_docente.ForeColor = System.Drawing.Color.White;
+            this.BtnAñadir_docente.Location = new System.Drawing.Point(44, 198);
+            this.BtnAñadir_docente.Name = "BtnAñadir_docente";
+            this.BtnAñadir_docente.Size = new System.Drawing.Size(115, 31);
+            this.BtnAñadir_docente.TabIndex = 16;
+            this.BtnAñadir_docente.Text = "Añadir";
+            this.BtnAñadir_docente.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -153,6 +176,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LightGray;
+            this.panel3.Controls.Add(this.foto_docente);
             this.panel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel3.Location = new System.Drawing.Point(654, 26);
             this.panel3.Name = "panel3";
@@ -260,20 +284,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.Datagrid_Docentes);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(853, 407);
             this.panel1.TabIndex = 3;
             // 
-            // dataGridView1
+            // Datagrid_Docentes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(847, 356);
-            this.dataGridView1.TabIndex = 1;
+            this.Datagrid_Docentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Datagrid_Docentes.Location = new System.Drawing.Point(3, 39);
+            this.Datagrid_Docentes.Name = "Datagrid_Docentes";
+            this.Datagrid_Docentes.Size = new System.Drawing.Size(847, 356);
+            this.Datagrid_Docentes.TabIndex = 1;
             // 
             // label1
             // 
@@ -285,25 +309,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Informacion del docente";
             // 
-            // label8
+            // foto_docente
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(494, 61);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "Status";
-            // 
-            // status_docente
-            // 
-            this.status_docente.FormattingEnabled = true;
-            this.status_docente.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.status_docente.Location = new System.Drawing.Point(537, 56);
-            this.status_docente.Name = "status_docente";
-            this.status_docente.Size = new System.Drawing.Size(100, 21);
-            this.status_docente.TabIndex = 20;
+            this.foto_docente.Location = new System.Drawing.Point(0, 0);
+            this.foto_docente.Name = "foto_docente";
+            this.foto_docente.Size = new System.Drawing.Size(151, 155);
+            this.foto_docente.TabIndex = 0;
+            this.foto_docente.TabStop = false;
             // 
             // AñadirDocentesForm
             // 
@@ -312,12 +324,14 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "AñadirDocentesForm";
-            this.Size = new System.Drawing.Size(859, 836);
+            this.Size = new System.Drawing.Size(859, 734);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Datagrid_Docentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foto_docente)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,10 +339,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnBorrar_docente;
+        private System.Windows.Forms.Button btnLimpiar_docente;
+        private System.Windows.Forms.Button btnActualizar_Docente;
+        private System.Windows.Forms.Button BtnAñadir_docente;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
@@ -344,9 +358,10 @@
         private System.Windows.Forms.TextBox Id_Docente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView Datagrid_Docentes;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox status_docente;
+        private System.Windows.Forms.PictureBox foto_docente;
     }
 }
