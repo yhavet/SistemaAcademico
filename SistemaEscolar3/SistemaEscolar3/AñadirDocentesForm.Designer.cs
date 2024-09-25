@@ -279,9 +279,9 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 12);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(853, 398);
+            this.panel1.Size = new System.Drawing.Size(853, 407);
             this.panel1.TabIndex = 3;
             // 
             // dataGridView1
