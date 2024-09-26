@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.status_docente = new System.Windows.Forms.ComboBox();
@@ -37,6 +38,7 @@
             this.BtnAñadir_docente = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.foto_docente = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Cursos_docente = new System.Windows.Forms.ComboBox();
             this.ciudad_docente = new System.Windows.Forms.TextBox();
@@ -52,12 +54,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Datagrid_Docentes = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.foto_docente = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.foto_docente)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagrid_Docentes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foto_docente)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -159,6 +160,7 @@
             this.BtnAñadir_docente.TabIndex = 16;
             this.BtnAñadir_docente.Text = "Añadir";
             this.BtnAñadir_docente.UseVisualStyleBackColor = false;
+            this.BtnAñadir_docente.Click += new System.EventHandler(this.BtnAñadir_docente_Click);
             // 
             // button1
             // 
@@ -182,6 +184,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(151, 155);
             this.panel3.TabIndex = 14;
+            // 
+            // foto_docente
+            // 
+            this.foto_docente.Location = new System.Drawing.Point(0, 0);
+            this.foto_docente.Name = "foto_docente";
+            this.foto_docente.Size = new System.Drawing.Size(151, 155);
+            this.foto_docente.TabIndex = 0;
+            this.foto_docente.TabStop = false;
             // 
             // label7
             // 
@@ -293,9 +303,20 @@
             // 
             // Datagrid_Docentes
             // 
-            this.Datagrid_Docentes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Datagrid_Docentes.AllowUserToDeleteRows = false;
+            this.Datagrid_Docentes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(31)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Datagrid_Docentes.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Datagrid_Docentes.EnableHeadersVisualStyles = false;
             this.Datagrid_Docentes.Location = new System.Drawing.Point(3, 39);
             this.Datagrid_Docentes.Name = "Datagrid_Docentes";
+            this.Datagrid_Docentes.RowHeadersVisible = false;
             this.Datagrid_Docentes.Size = new System.Drawing.Size(847, 356);
             this.Datagrid_Docentes.TabIndex = 1;
             // 
@@ -309,14 +330,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Informacion del docente";
             // 
-            // foto_docente
-            // 
-            this.foto_docente.Location = new System.Drawing.Point(0, 0);
-            this.foto_docente.Name = "foto_docente";
-            this.foto_docente.Size = new System.Drawing.Size(151, 155);
-            this.foto_docente.TabIndex = 0;
-            this.foto_docente.TabStop = false;
-            // 
             // AñadirDocentesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,10 +341,10 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.foto_docente)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagrid_Docentes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.foto_docente)).EndInit();
             this.ResumeLayout(false);
 
         }

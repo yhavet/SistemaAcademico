@@ -20,6 +20,7 @@ namespace SistemaEscolar3
         public string ImagenesDocente { set; get; }
         public string StatusDocentes { set; get; }
         public string CursosDocentes { set; get; }
+        public string insertar_fecha { set; get; }
 
         public List<AñadirDatosDocente> DatosDocentes()
         {
@@ -37,12 +38,18 @@ namespace SistemaEscolar3
                         SqlDataReader reader = cmd.ExecuteReader();
 
                         while(reader.Read()) 
-                        { 
-                            id = (int)reader["id"];
-                            IdDocente = reader["id_docente"].ToString();
-                            NombreDocente = reader["id_docente"].ToString();
-                            GeneroDocente = reader["genero_docente"].ToString();
-                            DireccionDocente = reader["direccion_docente"].ToString();
+                        {
+                            AñadirDatosDocente addTD = new AñadirDatosDocente();
+                            addTD.id = (int)reader["id"];
+                            addTD.IdDocente = reader["id_docente"].ToString();
+                            addTD.NombreDocente = reader["id_docente"].ToString();
+                            addTD.GeneroDocente = reader["genero_docente"].ToString();
+                            addTD.DireccionDocente = reader["direccion_docente"].ToString();
+                            addTD.StatusDocentes = reader["status_docente"].ToString();
+                            //ImagenesDocente = reader["foto_docente"].ToString();
+                            addTD.insertar_fecha = reader["insertar_fecha"].ToString();
+
+                            listData.Add(addTD);
 
                         }
                         reader.Close();
@@ -59,6 +66,7 @@ namespace SistemaEscolar3
                 }
 
             }
+            return listData; 
             
         }
 
