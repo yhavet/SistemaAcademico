@@ -3,23 +3,35 @@
   "WorkspaceRootPath": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yhavet\\AppData\\Local\\Temp\\fplt0yhx..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|c:\\users\\yhavet\\source\\repos\\yhavet\\sistemaacademico\\sistemaescolar3\\sistemaescolar3\\formularioiniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\formularioiniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\a\u00F1adirdatosdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\a\u00F1adirdatosdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\formularioiniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\formularioiniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\PC3\\AppData\\Local\\Temp\\flqtx0lc..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\a\u00F1adirdocentesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\a\u00F1adirdocentesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|c:\\users\\yhavet\\source\\repos\\yhavet\\sistemaacademico\\sistemaescolar3\\sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\a\u00F1adirdatosdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\a\u00F1adirdatosdocente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\a\u00F1adirdocentesform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,10 +42,6 @@
       "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\a\u00F1adirestudiantesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\formularioiniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\formularioiniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\paneldecontrolform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\paneldecontrolform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -42,18 +50,8 @@
       "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\a\u00F1adirestudiantesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\formularioiniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\formularioiniciosesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\paneldecontrolform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\paneldecontrolform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yhavet\\AppData\\Local\\Temp\\fplt0yhx..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Yhavet\\AppData\\Local\\Temp\\fplt0yhx..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,85 +61,127 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainFormulario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs",
-              "RelativeDocumentMoniker": "SistemaEscolar3\\MainFormulario.cs",
-              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SistemaEscolar3\\MainFormulario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T16:15:18.526Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "A\u00F1adirDocentesForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.cs",
-              "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirDocentesForm.cs",
-              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "SistemaEscolar3\\A\u00F1adirDocentesForm.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T18:04:49.444Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainFormulario.cs",
-              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs",
-              "RelativeDocumentMoniker": "SistemaEscolar3\\MainFormulario.cs",
-              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs",
-              "RelativeToolTip": "SistemaEscolar3\\MainFormulario.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAhwCQAAAAAAAAAAAAAAA==",
+              "Title": "A\u00F1adirDatosDocente.cs",
+              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDatosDocente.cs",
+              "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirDatosDocente.cs",
+              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDatosDocente.cs",
+              "RelativeToolTip": "SistemaEscolar3\\A\u00F1adirDatosDocente.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAwwBoAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T15:27:32.64Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T15:34:31.328Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SQLQuery1.sql ",
-              "DocumentMoniker": "C:\\Users\\Yhavet\\AppData\\Local\\Temp\\fplt0yhx..sql",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\fplt0yhx..sql",
-              "ToolTip": "SQLQuery1.sql *",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-09-25T16:08:17.53Z",
+              "Title": "FormularioInicioSesion.cs",
+              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\FormularioInicioSesion.cs",
+              "RelativeDocumentMoniker": "SistemaEscolar3\\FormularioInicioSesion.cs",
+              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\FormularioInicioSesion.cs",
+              "RelativeToolTip": "SistemaEscolar3\\FormularioInicioSesion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAACgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T19:23:16.102Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "A\u00F1adirDatosDocente.cs",
-              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDatosDocente.cs",
-              "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirDatosDocente.cs",
-              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDatosDocente.cs*",
-              "RelativeToolTip": "SistemaEscolar3\\A\u00F1adirDatosDocente.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAjAAAAAAAAAA==",
+              "Title": "FormularioInicioSesion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\FormularioInicioSesion.cs",
+              "RelativeDocumentMoniker": "SistemaEscolar3\\FormularioInicioSesion.cs",
+              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\FormularioInicioSesion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "SistemaEscolar3\\FormularioInicioSesion.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T15:34:31.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T19:23:12.933Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainFormulario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs",
+              "RelativeDocumentMoniker": "SistemaEscolar3\\MainFormulario.cs",
+              "ToolTip": "C:\\Users\\PC3\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\PC3\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T16:15:18.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\Form1.cs",
+              "RelativeDocumentMoniker": "SistemaEscolar3\\Form1.cs",
+              "ToolTip": "C:\\Users\\PC3\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\PC3\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T19:52:09.249Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "A\u00F1adirDocentesForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.Designer.cs",
-              "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirDocentesForm.Designer.cs",
-              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.Designer.cs*",
-              "RelativeToolTip": "SistemaEscolar3\\A\u00F1adirDocentesForm.Designer.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T14:22:04.425Z",
-              "EditorCaption": ""
+              "Title": "flqtx0lc..sql",
+              "DocumentMoniker": "C:\\Users\\PC3\\AppData\\Local\\Temp\\flqtx0lc..sql",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\PC3\\AppData\\Local\\Temp\\flqtx0lc..sql",
+              "ToolTip": "C:\\Users\\PC3\\AppData\\Local\\Temp\\flqtx0lc..sql",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\PC3\\AppData\\Local\\Temp\\flqtx0lc..sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-09-25T19:59:01.812Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "A\u00F1adirDocentesForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.cs",
+              "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirDocentesForm.cs",
+              "ToolTip": "C:\\Users\\PC3\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\PC3\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T18:04:49.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainFormulario.cs",
+              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs",
+              "RelativeDocumentMoniker": "SistemaEscolar3\\MainFormulario.cs",
+              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs",
+              "RelativeToolTip": "SistemaEscolar3\\MainFormulario.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T15:27:32.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "A\u00F1adirDocentesForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.Designer.cs",
+              "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirDocentesForm.Designer.cs",
+              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.Designer.cs",
+              "RelativeToolTip": "SistemaEscolar3\\A\u00F1adirDocentesForm.Designer.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T14:22:04.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "A\u00F1adirEstudiantesForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirEstudiantesForm.cs",
               "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirEstudiantesForm.cs",
@@ -152,18 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormularioInicioSesion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\FormularioInicioSesion.cs",
-              "RelativeDocumentMoniker": "SistemaEscolar3\\FormularioInicioSesion.cs",
-              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\FormularioInicioSesion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "SistemaEscolar3\\FormularioInicioSesion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T19:23:12.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "PanelDeControlForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\PanelDeControlForm.cs",
               "RelativeDocumentMoniker": "SistemaEscolar3\\PanelDeControlForm.cs",
@@ -174,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "A\u00F1adirEstudiantesForm.cs",
               "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirEstudiantesForm.cs",
               "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirEstudiantesForm.cs",
@@ -186,19 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FormularioInicioSesion.cs",
-              "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\FormularioInicioSesion.cs",
-              "RelativeDocumentMoniker": "SistemaEscolar3\\FormularioInicioSesion.cs",
-              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\FormularioInicioSesion.cs",
-              "RelativeToolTip": "SistemaEscolar3\\FormularioInicioSesion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAACZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T19:23:16.102Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "PanelDeControlForm.cs",
               "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\PanelDeControlForm.cs",
               "RelativeDocumentMoniker": "SistemaEscolar3\\PanelDeControlForm.cs",

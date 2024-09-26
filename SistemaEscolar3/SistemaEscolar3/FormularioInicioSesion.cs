@@ -2,16 +2,14 @@
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.Runtime.Remoting.Contexts;
 
 
 namespace SistemaEscolar3
 {
     public partial class FormularioInicioSesion : Form
     {
-        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-JMH1N0F\\SQLEXPRESS;Initial Catalog=TEC3;Integrated Security=True;Connect Timeout=30");
-
-
-
+        SqlConnection connect = new SqlConnection("Data Source=YHAVET\\SQLEXPRESS;Initial Catalog=Tecnica3;Integrated Security=True;Connect Timeout=30");
 
         public FormularioInicioSesion()
         {
