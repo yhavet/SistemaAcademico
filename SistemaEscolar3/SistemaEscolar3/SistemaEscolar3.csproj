@@ -158,6 +158,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Directorio_Docentes\" />
     <Folder Include="Imagenes\" />
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace SistemaEscolar3
 {
@@ -40,7 +41,8 @@ namespace SistemaEscolar3
         || string.IsNullOrEmpty(ciudad_docente.Text)
         || string.IsNullOrEmpty(status_docente.Text)
         || string.IsNullOrEmpty(Cursos_docente.Text)
-        || foto_docente == null)
+        || foto_docente == null
+        || imagePath == null)
             {
                 MessageBox.Show("Por favor rellene todos los campos en blancos", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -52,15 +54,16 @@ namespace SistemaEscolar3
                     {
                         connect.Open();
 
-                        string ComprobarIdDocente = "SELECT * FROM docentes WHERE id_docente = @IdDocente ";
+                        string ComprobarIdDocente = "SELECT COUNT(*) FROM docentes WHERE id_docente = @IdDocente ";
 
+                     
+                        
                         using (SqlCommand checkTID = new SqlCommand(ComprobarIdDocente, connect)) 
                         {
-                            SqlDataAdapter cAdapter = new SqlDataAdapter(checkTID);
-                            DataTable cTable = new DataTable(); 
-                            cAdapter.Fill(cTable);
+                            checkTID.Parameters.AddWithValue("id_docente", Id_Docente.Text.Trim());
+                            int count = (int)checkTID.ExecuteScalar();
 
-                            if(cTable.Rows.Count > 1)
+                            if (count > 1)
                             {
                                 MessageBox.Show("Docentes ID: " + Id_Docente.Text.Trim() + " Ya existe" , 
                                     "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -69,12 +72,24 @@ namespace SistemaEscolar3
                             {
                                 DateTime today = DateTime.Today;
 
-                                string InsertarDatos = "INSERT INTO docentes " + 
+                                string InsertarDatos = "INSERT INTO docentes " +
                                 "(id_docente, nombre_docente, genero_docente, direccion_docente, " +
-                                " foto_docente, cursos_docente, status_docente, insertar_fecha) " +
-                                "VALUES (@id_docente, @NombreDocente, @GeneroDocente, @DireccionDocente, @StatusDocentes" +
-                                "@ImagenesDocente, @StatusDocentes, @cursos_docente, @insertar_fecha)";
+                                "foto_docente, cursos_docente, status_docente, insertar_fecha) " +
+                                "VALUES (@id_docente, @NombreDocente, @GeneroDocente, @DireccionDocente, " +
+                                "@ImagenesDocente, @CursosDocentes, @StatusDocentes, @InsertarFecha)";
 
+
+
+                                string path = Path.Combine(@"C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEscolar3\Directorio_Docentes\", Id_Docente.Text.Trim() + ".jpg");
+
+                                string directoryPath = Path.GetDirectoryName(path);
+
+                                if (Directory.Exists(directoryPath))
+                                {
+                                    Directory.CreateDirectory(directoryPath);
+                                }
+
+                                File.Copy(imagePath, path, true);
                                 using (SqlCommand cmd = new SqlCommand(InsertarDatos, connect))
                                 {
                                     cmd.Parameters.AddWithValue("@id_docente", Id_Docente.Text.Trim());
@@ -82,9 +97,13 @@ namespace SistemaEscolar3
                                     cmd.Parameters.AddWithValue("@GeneroDocente", generos_docente.Text.Trim());
                                     cmd.Parameters.AddWithValue("@DireccionDocente", direccion_docente.Text.Trim());
                                     cmd.Parameters.AddWithValue("@StatusDocentes", status_docente.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@ImagenesDocente",foto_docente.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@ImagenesDocente",path.Trim());
                                     cmd.Parameters.AddWithValue("@CursosDocentes", Cursos_docente.Text.Trim());
                                     cmd.Parameters.AddWithValue("@InsertarFecha", today.ToString());
+
+                                    cmd.ExecuteNonQuery();
+                                    MessageBox.Show("Datos insertados correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                                 }
                             }
                         }
