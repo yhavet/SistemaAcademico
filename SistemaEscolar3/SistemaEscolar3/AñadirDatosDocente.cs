@@ -20,7 +20,7 @@ namespace SistemaEscolar3
         public string ImagenesDocente { set; get; }
         public string StatusDocentes { set; get; }
         public string CursosDocentes { set; get; }
-        public string insertar_fecha { set; get; }
+        public string InsertarFecha { set; get; }
 
         public List<AñadirDatosDocente> DatosDocentes()
         {
@@ -46,8 +46,9 @@ namespace SistemaEscolar3
                             addTD.GeneroDocente = reader["genero_docente"].ToString();
                             addTD.DireccionDocente = reader["direccion_docente"].ToString();
                             addTD.StatusDocentes = reader["status_docente"].ToString();
-                            //ImagenesDocente = reader["foto_docente"].ToString();
-                            addTD.insertar_fecha = reader["insertar_fecha"].ToString();
+                            addTD.ImagenesDocente = reader["foto_docente"].ToString();
+                            addTD.InsertarFecha = reader["insertar_fecha"].ToString();
+                            addTD.CursosDocentes = reader["cursos_docente"].ToString();
 
                             listData.Add(addTD);
 
