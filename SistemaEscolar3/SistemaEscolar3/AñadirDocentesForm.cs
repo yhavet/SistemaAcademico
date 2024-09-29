@@ -34,13 +34,13 @@ namespace SistemaEscolar3
 
         private void BtnAñadir_docente_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Id_Docente.Text)
-        || string.IsNullOrEmpty(NombreCompleto_docente.Text)
-        || string.IsNullOrEmpty(generos_docente.Text)
-        || string.IsNullOrEmpty(direccion_docente.Text)
-        || string.IsNullOrEmpty(ciudad_docente.Text)
-        || string.IsNullOrEmpty(status_docente.Text)
-        || string.IsNullOrEmpty(Cursos_docente.Text)
+            if (Id_Docente.Text == ""
+        || NombreCompleto_docente.Text == ""
+        || generos_docente.Text == ""
+        || direccion_docente.Text == ""
+        || ciudad_docente.Text == ""
+        || status_docente.Text == ""
+        || Cursos_docente.Text == ""
         || foto_docente == null
         || imagePath == null)
             {
