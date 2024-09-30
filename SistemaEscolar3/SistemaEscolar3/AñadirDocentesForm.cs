@@ -173,7 +173,8 @@ namespace SistemaEscolar3
                     {
                         connect.Open();
 
-                        DialogResult check = MessageBox.Show("..........." + Id_Docente.Text.Trim() + "?", "Confirmar mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult check = MessageBox.Show("Estas seguro de que quieres actualizar la identificacion del estudiante: " 
+                            + Id_Docente.Text.Trim() + "?", "Confirmar mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     }
                     catch (Exception ex)
