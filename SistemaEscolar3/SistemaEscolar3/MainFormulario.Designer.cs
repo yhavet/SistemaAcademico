@@ -299,9 +299,9 @@
             // 
             // añadirDocentesForm1
             // 
-            this.añadirDocentesForm1.Location = new System.Drawing.Point(0, -16);
+            this.añadirDocentesForm1.Location = new System.Drawing.Point(0, 0);
             this.añadirDocentesForm1.Name = "añadirDocentesForm1";
-            this.añadirDocentesForm1.Size = new System.Drawing.Size(865, 741);
+            this.añadirDocentesForm1.Size = new System.Drawing.Size(859, 734);
             this.añadirDocentesForm1.TabIndex = 0;
             // 
             // MainFormulario

@@ -89,9 +89,8 @@ namespace SistemaEscolar3
                                     cmd.Parameters.AddWithValue("@GeneroDocente", generos_docente.Text.Trim());
                                     cmd.Parameters.AddWithValue("@DireccionDocente", direccion_docente.Text.Trim());
                                     cmd.Parameters.AddWithValue("@StatusDocentes", status_docente.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@ImagenesDocente", path.Trim());
                                     cmd.Parameters.AddWithValue("@CursosDocentes", Cursos_docente.Text.Trim());
-                                    //cmd.Parameters.AddWithValue("@InsertarFecha", today.ToString());
+                                    cmd.Parameters.AddWithValue("@ImagenesDocente", path.Trim());
                                     cmd.Parameters.AddWithValue("@InsertarFecha", today.ToString("yyyy-MM-dd"));
 
 
@@ -143,6 +142,47 @@ namespace SistemaEscolar3
             {
                 imagePath = open.FileName;
                 foto_docente.ImageLocation = imagePath;
+            }
+        }
+
+        private void btnLimpiar_docente_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        private void btnActualizar_Docente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Datagrid_Docentes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+
+            if (e.RowIndex != -1) 
+            {
+                DataGridViewRow row = Datagrid_Docentes.Rows[e.RowIndex];
+                Id_Docente.Text = row.Cells[1].Value.ToString();
+                NombreCompleto_docente.Text = row.Cells[2].Value.ToString();
+                generos_docente.Text = row.Cells[3].Value.ToString();
+                direccion_docente.Text = row.Cells[4].Value.ToString();
+                imagePath = row.Cells[5].Value.ToString();
+
+                string ImageData = row.Cells[5].Value.ToString();
+
+                if (ImageData != null && ImageData.Length > 0) 
+                {
+                    
+                        foto_docente.Image = Image.FromFile(ImageData);
+                    
+                }else
+                {
+                    foto_docente = null;
+                }
+
+                status_docente.Text = row.Cells[6].Value.ToString();
+                Cursos_docente.Text = row.Cells[7].Value.ToString();
+                
             }
         }
     }
