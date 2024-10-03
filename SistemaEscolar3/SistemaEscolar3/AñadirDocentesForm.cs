@@ -62,7 +62,7 @@ namespace SistemaEscolar3
                         connect.Open(); // Abre la conexión a la base de datos
 
                         // Consulta SQL para comprobar si el ID del docente ya existe
-                        string ComprobarIdDocente = "SELECT COUNT(*) FROM docentes WHERE id_docente = @IdDocente";
+                        string ComprobarIdDocente = "SELECT id_docente, nombre_docente, genero_docente, direccion_docente, cursos_docente, status_docente, insertar_fecha FROM docentes";
 
                         // Usa SqlCommand para ejecutar la consulta
                         using (SqlCommand checkTID = new SqlCommand(ComprobarIdDocente, connect))
@@ -163,7 +163,7 @@ namespace SistemaEscolar3
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog open = new OpenFileDialog();
-            open.Filter = "Image files (*.jpg; *.png)|*.jpg;*.png"; // Filtro para seleccionar solo archivos de imagen
+            open.Filter = "Image files (.jpg; *.png)|.jpg;*.png"; // Filtro para seleccionar solo archivos de imagen
 
             // Si el usuario selecciona un archivo, guarda la ruta y muestra la imagen en el formulario
             if (open.ShowDialog() == DialogResult.OK)
@@ -318,6 +318,5 @@ namespace SistemaEscolar3
             }
         }
     }
-
 
 }
