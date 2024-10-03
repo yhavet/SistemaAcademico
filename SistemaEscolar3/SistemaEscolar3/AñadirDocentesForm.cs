@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace SistemaEscolar3
 {
@@ -45,7 +40,6 @@ namespace SistemaEscolar3
                 || direccion_docente.Text == ""
                 || ciudad_docente.Text == ""
                 || status_docente.Text == ""
-                || Cursos_docente.Text == ""
                 || foto_docente == null
                 || imagePath == null)
             {
@@ -68,7 +62,7 @@ namespace SistemaEscolar3
                         Datagrid_Docentes.DataSource = addTD.DatosDocentes();
 
                         // Consulta SQL para comprobar si el ID del docente ya existe
-                        string ComprobarIdDocente = "SELECT id_docente, nombre_docente, genero_docente, direccion_docente, cursos_docente, status_docente, insertar_fecha FROM docentes";
+                        string ComprobarIdDocente = "SELECT id_docente, nombre_docente, genero_docente, direccion_docente, status_docente, insertar_fecha FROM docentes";
 
                         // Usa SqlCommand para ejecutar la consulta
                         using (SqlCommand checkTID = new SqlCommand(ComprobarIdDocente, connect))
@@ -90,9 +84,9 @@ namespace SistemaEscolar3
                                 // Consulta SQL para insertar los datos del docente
                                 string InsertarDatos = "INSERT INTO docentes " +
                                     "(id_docente, nombre_docente, genero_docente, direccion_docente, " +
-                                    "foto_docente, cursos_docente, status_docente, insertar_fecha) " +
+                                    "foto_docente, status_docente, insertar_fecha) " +
                                     "VALUES (@id_docente, @NombreDocente, @GeneroDocente, @DireccionDocente, " +
-                                    "@ImagenesDocente, @CursosDocentes, @StatusDocentes, @InsertarFecha)";
+                                    "@ImagenesDocente, @StatusDocentes, @InsertarFecha)";
 
                                 // Define la ruta donde se almacenará la imagen del docente
                                 string path = Path.Combine(@"C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEscolar3\Directorio_Docentes\", Id_Docente.Text.Trim() + ".jpg");
@@ -116,7 +110,6 @@ namespace SistemaEscolar3
                                     cmd.Parameters.AddWithValue("@GeneroDocente", generos_docente.Text.Trim());
                                     cmd.Parameters.AddWithValue("@DireccionDocente", direccion_docente.Text.Trim());
                                     cmd.Parameters.AddWithValue("@StatusDocentes", status_docente.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@CursosDocentes", Cursos_docente.Text.Trim());
                                     cmd.Parameters.AddWithValue("@ImagenesDocente", path.Trim());
                                     cmd.Parameters.AddWithValue("@InsertarFecha", today.ToString("yyyy-MM-dd"));
 
@@ -156,7 +149,6 @@ namespace SistemaEscolar3
             direccion_docente.Text = "";
             ciudad_docente.Text = "";
             status_docente.Text = "";
-            Cursos_docente.Text = "";
             foto_docente.Image = null;
             imagePath = null;
         }
@@ -195,7 +187,6 @@ namespace SistemaEscolar3
               || direccion_docente.Text == ""
               || ciudad_docente.Text == ""
               || status_docente.Text == ""
-              || Cursos_docente.Text == ""
               || foto_docente == null
               || imagePath == null)
             {
@@ -230,7 +221,6 @@ namespace SistemaEscolar3
                             String UpdateData = "UPDATE docentes SET " +
                                 "nombre_docente = @NombreDocente, genero_docente = @GeneroDocente" +
                                 ", direccion_docente = @DireccionDocente, foto_docente = @ImagenesDocente " +
-                                ", cursos_docente = @CursosDocentes" +
                                 ", status_docente = @StatusDocentes" +
                                 ", insertar_fecha = @InsertarFecha WHERE id_docente = @id_docente";
 
@@ -256,7 +246,6 @@ namespace SistemaEscolar3
                                 cmd.Parameters.AddWithValue("@DireccionDocente", direccion_docente.Text.Trim());
                                 cmd.Parameters.AddWithValue("@StatusDocentes", status_docente.Text.Trim());
                                 cmd.Parameters.AddWithValue("@ImagenesDocente", path);
-                                cmd.Parameters.AddWithValue("@CursosDocentes", Cursos_docente.Text.Trim());
                                 cmd.Parameters.AddWithValue("@InsertarFecha", today.ToString("yyyy-MM-dd"));
                                 cmd.Parameters.AddWithValue("@id_docente", Id_Docente.Text.Trim());
 
@@ -292,6 +281,7 @@ namespace SistemaEscolar3
         }
 
         // Evento que se activa cuando se hace clic en una celda del DataGrid
+
         private void Datagrid_Docentes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // Verifica que el índice de la fila no sea -1 (que indica que no se seleccionó una fila válida)
@@ -300,29 +290,37 @@ namespace SistemaEscolar3
                 DataGridViewRow row = Datagrid_Docentes.Rows[e.RowIndex];
 
                 // Carga los datos de la fila seleccionada en los campos del formulario
-                Id_Docente.Text = row.Cells[1].Value.ToString();
-                NombreCompleto_docente.Text = row.Cells[2].Value.ToString();
-                generos_docente.Text = row.Cells[3].Value.ToString();
-                direccion_docente.Text = row.Cells[4].Value.ToString();
-                imagePath = row.Cells[5].Value.ToString(); // Obtiene la ruta de la imagen
+                Id_Docente.Text = row.Cells[1].Value?.ToString() ?? string.Empty;
+                NombreCompleto_docente.Text = row.Cells[2].Value?.ToString() ?? string.Empty;
+                generos_docente.Text = row.Cells[3].Value?.ToString() ?? string.Empty;
+                direccion_docente.Text = row.Cells[4].Value?.ToString() ?? string.Empty;
+                imagePath = row.Cells[5].Value?.ToString() ?? string.Empty; // Obtiene la ruta de la imagen
 
-                string ImageData = row.Cells[5].Value.ToString();
+                string ImageData = row.Cells[5].Value?.ToString();
 
                 // Si hay una imagen válida, la carga en el control de imagen
-                if (ImageData != null && ImageData.Length > 0)
+                if (!string.IsNullOrEmpty(ImageData) && File.Exists(ImageData))
                 {
-                    foto_docente.Image = Image.FromFile(ImageData);
+                    try
+                    {
+                        foto_docente.Image = Image.FromFile(ImageData); // Carga la imagen
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al cargar la imagen: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        foto_docente.Image = null; // Deja la imagen en blanco en caso de error
+                    }
                 }
                 else
                 {
-                    foto_docente = null; // Si no hay imagen, deja el control vacío
+                    foto_docente.Image = null; // Si no hay imagen, deja el control vacío
                 }
 
                 // Carga los datos restantes
-                status_docente.Text = row.Cells[6].Value.ToString();
-                Cursos_docente.Text = row.Cells[7].Value.ToString();
+                status_docente.Text = row.Cells[6].Value?.ToString() ?? string.Empty;
             }
         }
+
     }
 
 }

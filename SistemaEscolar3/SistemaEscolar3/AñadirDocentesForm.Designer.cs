@@ -40,8 +40,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.foto_docente = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Cursos_docente = new System.Windows.Forms.ComboBox();
             this.ciudad_docente = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.direccion_docente = new System.Windows.Forms.TextBox();
@@ -73,8 +71,6 @@
             this.panel2.Controls.Add(this.BtnAñadir_docente);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.Cursos_docente);
             this.panel2.Controls.Add(this.ciudad_docente);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.direccion_docente);
@@ -93,7 +89,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(494, 61);
+            this.label8.Location = new System.Drawing.Point(490, 35);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 13);
             this.label8.TabIndex = 21;
@@ -105,7 +101,7 @@
             this.status_docente.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.status_docente.Location = new System.Drawing.Point(537, 56);
+            this.status_docente.Location = new System.Drawing.Point(533, 30);
             this.status_docente.Name = "status_docente";
             this.status_docente.Size = new System.Drawing.Size(100, 21);
             this.status_docente.TabIndex = 20;
@@ -197,23 +193,6 @@
             this.foto_docente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.foto_docente.TabIndex = 0;
             this.foto_docente.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(492, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Cursos";
-            // 
-            // Cursos_docente
-            // 
-            this.Cursos_docente.FormattingEnabled = true;
-            this.Cursos_docente.Location = new System.Drawing.Point(537, 26);
-            this.Cursos_docente.Name = "Cursos_docente";
-            this.Cursos_docente.Size = new System.Drawing.Size(100, 21);
-            this.Cursos_docente.TabIndex = 10;
             // 
             // ciudad_docente
             // 
@@ -375,8 +354,6 @@
         private System.Windows.Forms.Button BtnAñadir_docente;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox Cursos_docente;
         private System.Windows.Forms.TextBox ciudad_docente;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox direccion_docente;
