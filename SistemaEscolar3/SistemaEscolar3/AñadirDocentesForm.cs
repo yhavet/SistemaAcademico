@@ -61,6 +61,12 @@ namespace SistemaEscolar3
                     {
                         connect.Open(); // Abre la conexión a la base de datos
 
+                        // Instancia de la clase AñadirDatosDocente para obtener los datos
+                        AñadirDatosDocente addTD = new AñadirDatosDocente();
+
+                        // Asigna los datos obtenidos por el método DatosDocentes al DataGridView
+                        Datagrid_Docentes.DataSource = addTD.DatosDocentes();
+
                         // Consulta SQL para comprobar si el ID del docente ya existe
                         string ComprobarIdDocente = "SELECT id_docente, nombre_docente, genero_docente, direccion_docente, cursos_docente, status_docente, insertar_fecha FROM docentes";
 

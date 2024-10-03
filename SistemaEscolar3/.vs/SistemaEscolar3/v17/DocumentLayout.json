@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\a\u00F1adirdocentesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|c:\\users\\yhavet\\source\\repos\\yhavet\\sistemaacademico\\sistemaescolar3\\sistemaescolar3\\a\u00F1adirdocentesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\a\u00F1adirdocentesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|c:\\users\\yhavet\\source\\repos\\yhavet\\sistemaacademico\\sistemaescolar3\\sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C48A19FB-36A3-40CD-B05D-34C171377261}|SistemaEscolar3\\SistemaEscolar3.csproj|solutionrelative:sistemaescolar3\\mainformulario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -91,14 +91,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "A\u00F1adirDocentesForm.cs [Dise\u00F1o]",
+              "Title": "A\u00F1adirDocentesForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.cs",
               "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirDocentesForm.cs",
-              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "SistemaEscolar3\\A\u00F1adirDocentesForm.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.cs [Design]*",
+              "RelativeToolTip": "SistemaEscolar3\\A\u00F1adirDocentesForm.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-03T03:40:21.116Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -110,8 +110,7 @@
               "RelativeToolTip": "SistemaEscolar3\\MainFormulario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T02:53:44.014Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-03T02:53:44.014Z"
             },
             {
               "$type": "Document",
@@ -132,7 +131,7 @@
               "RelativeDocumentMoniker": "SistemaEscolar3\\A\u00F1adirDocentesForm.cs",
               "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\A\u00F1adirDocentesForm.cs*",
               "RelativeToolTip": "SistemaEscolar3\\A\u00F1adirDocentesForm.cs*",
-              "ViewState": "AgIAACMAAAAAAAAAAAAUwEkAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAYwEMAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T21:31:17.924Z",
               "EditorCaption": ""
@@ -146,8 +145,7 @@
               "ToolTip": "C:\\Users\\Yhavet\\source\\repos\\yhavet\\SistemaAcademico\\SistemaEscolar3\\SistemaEscolar3\\MainFormulario.cs [Dise\u00F1o]",
               "RelativeToolTip": "SistemaEscolar3\\MainFormulario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T16:15:18.526Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-09-23T16:15:18.526Z"
             },
             {
               "$type": "Document",
