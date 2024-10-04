@@ -311,7 +311,7 @@ namespace SistemaEscolar3
             {
                 if (connect.State != ConnectionState.Open)
                 {
-                    DialogResult check = MessageBox.Show("............"
+                    DialogResult check = MessageBox.Show("¿Estas seguro de que quieres eliminar este registro?"
 
                         + Id_Docente.Text + "?", "Confirmar Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
