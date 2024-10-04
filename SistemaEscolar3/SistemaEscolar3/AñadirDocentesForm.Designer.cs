@@ -118,6 +118,7 @@
             this.btnBorrar_docente.TabIndex = 19;
             this.btnBorrar_docente.Text = "Borrar";
             this.btnBorrar_docente.UseVisualStyleBackColor = false;
+            this.btnBorrar_docente.Click += new System.EventHandler(this.btnBorrar_docente_Click);
             // 
             // btnLimpiar_docente
             // 
@@ -288,6 +289,8 @@
             // Datagrid_Docentes
             // 
             this.Datagrid_Docentes.AllowUserToDeleteRows = false;
+            this.Datagrid_Docentes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Datagrid_Docentes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Datagrid_Docentes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.Datagrid_Docentes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

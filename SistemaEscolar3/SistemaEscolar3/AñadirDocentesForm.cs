@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace SistemaEscolar3
 {
@@ -21,19 +22,41 @@ namespace SistemaEscolar3
         }
 
         // Método para cargar los datos de los docentes en el DataGrid
+
+
         public void DatosVisualesDocente()
         {
-            // Crea una instancia de AñadirDatosDocente y asigna los datos al DataGrid
-            AñadirDatosDocente addTD = new AñadirDatosDocente();
-            Datagrid_Docentes.DataSource = addTD.DatosDocentes();
+            try
+            {
+                if (connect.State != ConnectionState.Open)
+                {
+                    connect.Open(); // Abre la conexión si no está abierta
+                }
 
+                // Consulta SQL para obtener los datos de los docentes
+                string query = "SELECT id_docente, nombre_docente, genero_docente, direccion_docente, foto_docente, status_docente, insertar_fecha FROM docentes";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connect);
+
+                // Crea una tabla para almacenar los datos
+                DataTable dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                // Asigna la tabla como fuente de datos del DataGridView
+                Datagrid_Docentes.DataSource = dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connect.Close(); // Cierra la conexión
+            }
         }
 
-        // Evento que se activa al hacer clic en el botón de añadir docente
-
+        // Evento para añadir un docente
         private void BtnAñadir_docente_Click(object sender, EventArgs e)
         {
-            // Verifica si alguno de los campos está vacío
             if (Id_Docente.Text == ""
                 || NombreCompleto_docente.Text == ""
                 || generos_docente.Text == ""
@@ -43,102 +66,67 @@ namespace SistemaEscolar3
                 || foto_docente == null
                 || imagePath == null)
             {
-                // Muestra un mensaje de error si faltan campos
-                MessageBox.Show("Por favor rellene todos los campos en blanco", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor rellene todos los campos en blanco", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            try
             {
-                // Abre la conexión si aún no está abierta
                 if (connect.State != ConnectionState.Open)
                 {
-                    try
+                    connect.Open(); // Abre la conexión a la base de datos
+                }
+
+                // Verificar si el ID ya existe
+                string ComprobarIdDocente = "SELECT COUNT(*) FROM docentes WHERE id_docente = @IdDocente";
+                using (SqlCommand checkTID = new SqlCommand(ComprobarIdDocente, connect))
+                {
+                    checkTID.Parameters.AddWithValue("@IdDocente", Id_Docente.Text.Trim());
+                    int count = (int)checkTID.ExecuteScalar();
+
+                    if (count >= 1)
                     {
-                        connect.Open(); // Abre la conexión a la base de datos
-
-                        // Instancia de la clase AñadirDatosDocente para obtener los datos
-                        AñadirDatosDocente addTD = new AñadirDatosDocente();
-
-                        // Asigna los datos obtenidos por el método DatosDocentes al DataGridView
-                        Datagrid_Docentes.DataSource = addTD.DatosDocentes();
-
-                        // Consulta SQL para comprobar si el ID del docente ya existe
-                        string ComprobarIdDocente = "SELECT id_docente, nombre_docente, genero_docente, direccion_docente, status_docente, insertar_fecha FROM docentes";
-
-                        // Usa SqlCommand para ejecutar la consulta
-                        using (SqlCommand checkTID = new SqlCommand(ComprobarIdDocente, connect))
-                        {
-                            checkTID.Parameters.AddWithValue("@IdDocente", Id_Docente.Text.Trim());
-                            int count = (int)checkTID.ExecuteScalar(); // Obtiene el resultado de la consulta
-
-                            // Si el ID del docente ya existe, muestra un mensaje de error
-                            if (count >= 1)
-                            {
-                                MessageBox.Show("Docente ID: " + Id_Docente.Text.Trim() + " ya existe",
-                                    "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                            else
-                            {
-                                // Si el ID no existe, inserta los nuevos datos del docente
-                                DateTime today = DateTime.Today;
-
-                                // Consulta SQL para insertar los datos del docente
-                                string InsertarDatos = "INSERT INTO docentes " +
-                                    "(id_docente, nombre_docente, genero_docente, direccion_docente, " +
-                                    "foto_docente, status_docente, insertar_fecha) " +
-                                    "VALUES (@id_docente, @NombreDocente, @GeneroDocente, @DireccionDocente, " +
-                                    "@ImagenesDocente, @StatusDocentes, @InsertarFecha)";
-
-                                // Define la ruta donde se almacenará la imagen del docente
-                                string path = Path.Combine(@"C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEscolar3\Directorio_Docentes\", Id_Docente.Text.Trim() + ".jpg");
-                                string directoryPath = Path.GetDirectoryName(path);
-
-                                // Crea el directorio si no existe
-                                if (!Directory.Exists(directoryPath))
-                                {
-                                    Directory.CreateDirectory(directoryPath);
-                                }
-
-                                // Copia la imagen del docente a la ruta especificada
-                                File.Copy(imagePath, path, true);
-
-                                // Usa SqlCommand para ejecutar la inserción
-                                using (SqlCommand cmd = new SqlCommand(InsertarDatos, connect))
-                                {
-                                    // Asigna los valores de los campos a los parámetros de la consulta
-                                    cmd.Parameters.AddWithValue("@id_docente", Id_Docente.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@NombreDocente", NombreCompleto_docente.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@GeneroDocente", generos_docente.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@DireccionDocente", direccion_docente.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@StatusDocentes", status_docente.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@ImagenesDocente", path.Trim());
-                                    cmd.Parameters.AddWithValue("@InsertarFecha", today.ToString("yyyy-MM-dd"));
-
-                                    // Ejecuta la consulta y muestra un mensaje de éxito
-                                    cmd.ExecuteNonQuery();
-                                    MessageBox.Show("Datos insertados correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                                    // Actualiza el DataGrid con los nuevos datos
-                                    DatosVisualesDocente();
-
-                                    // Limpia los campos del formulario
-                                    LimpiarCampos();
-                                }
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        // Muestra un mensaje de error si ocurre una excepción
-                        MessageBox.Show("Error al conectarse a la base de datos: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    finally
-                    {
-                        connect.Close(); // Cierra la conexión a la base de datos
+                        MessageBox.Show("Docente ID: " + Id_Docente.Text.Trim() + " ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
                 }
+
+                // Insertar los datos del docente
+                string InsertarDatos = "INSERT INTO docentes " +
+                                       "(id_docente, nombre_docente, genero_docente, direccion_docente, foto_docente, status_docente, insertar_fecha) " +
+                                       "VALUES (@id_docente, @NombreDocente, @GeneroDocente, @DireccionDocente, @ImagenesDocente, @StatusDocentes, @InsertarFecha)";
+
+                string path = Path.Combine(@"C:\Directorio_Docentes\", Id_Docente.Text.Trim() + ".jpg");
+                Directory.CreateDirectory(Path.GetDirectoryName(path));
+                File.Copy(imagePath, path, true);
+
+                using (SqlCommand cmd = new SqlCommand(InsertarDatos, connect))
+                {
+                    cmd.Parameters.AddWithValue("@id_docente", Id_Docente.Text.Trim());
+                    cmd.Parameters.AddWithValue("@NombreDocente", NombreCompleto_docente.Text.Trim());
+                    cmd.Parameters.AddWithValue("@GeneroDocente", generos_docente.Text.Trim());
+                    cmd.Parameters.AddWithValue("@DireccionDocente", direccion_docente.Text.Trim());
+                    cmd.Parameters.AddWithValue("@StatusDocentes", status_docente.Text.Trim());
+                    cmd.Parameters.AddWithValue("@ImagenesDocente", path.Trim());
+                    cmd.Parameters.AddWithValue("@InsertarFecha", DateTime.Today.ToString("yyyy-MM-dd"));
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Datos insertados correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Refresca el DataGridView
+                    DatosVisualesDocente();
+                    LimpiarCampos();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar con la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                connect.Close(); // Cierra la conexión
             }
         }
-
 
         // Método para limpiar los campos del formulario
         private void LimpiarCampos()
@@ -160,7 +148,7 @@ namespace SistemaEscolar3
         // Evento que se activa al hacer clic en el botón para seleccionar una imagen
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
+            OpenFileDialog open = new OpenFileDialog(); 
             open.Filter = "Image files (.jpg; *.png)|.jpg;*.png"; // Filtro para seleccionar solo archivos de imagen
 
             // Si el usuario selecciona un archivo, guarda la ruta y muestra la imagen en el formulario
@@ -226,16 +214,6 @@ namespace SistemaEscolar3
 
                             // Define la ruta donde se almacenará la imagen actualizada
                             string path = Path.Combine(@"C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEscolar3\Directorio_Docentes\", Id_Docente.Text.Trim() + ".jpg");
-                            string directoryPath = Path.GetDirectoryName(path);
-
-                            // Crea el directorio si no existe
-                            if (!Directory.Exists(directoryPath))
-                            {
-                                Directory.CreateDirectory(directoryPath);
-                            }
-
-                            // Copia la nueva imagen a la ruta especificada
-                            File.Copy(imagePath, path, true);
 
                             // Usa SqlCommand para ejecutar la actualización
                             using (SqlCommand cmd = new SqlCommand(UpdateData, connect))
@@ -251,10 +229,11 @@ namespace SistemaEscolar3
 
                                 // Ejecuta la consulta y muestra un mensaje de éxito
                                 cmd.ExecuteNonQuery();
+                                DatosVisualesDocente();
+
                                 MessageBox.Show("Datos actualizados correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                // Actualiza el DataGrid
-                                DatosVisualesDocente();
+                   
 
                                 // Limpia los campos
                                 LimpiarCampos();
@@ -321,6 +300,69 @@ namespace SistemaEscolar3
             }
         }
 
+        private void btnBorrar_docente_Click(object sender, EventArgs e)
+        {
+            if(Id_Docente.Text == "")
+            {
+                MessageBox.Show("Por favor selecciona el elemento primero", "Error Mensaje",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                if (connect.State != ConnectionState.Open)
+                {
+                    DialogResult check = MessageBox.Show("............"
+
+                        + Id_Docente.Text + "?", "Confirmar Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    DateTime today = DateTime.Today;
+
+                    if (check == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            connect.Open();
+
+                            string BorrarDatos = "UPDATE docentes SET actualizar_fecha = @ActualizarFecha " +
+                                "WHERE id_docente = @IdDocente";
+
+                            using (SqlCommand cmd = new SqlCommand(BorrarDatos, connect))
+
+                            {
+                                cmd.Parameters.AddWithValue("ActualizarFecha", today);
+                                cmd.Parameters.AddWithValue("@IdDocente", Id_Docente.Text.Trim());
+
+                                cmd.ExecuteNonQuery();
+                                DatosVisualesDocente();
+
+                                MessageBox.Show("Registro eliminado de forma exitosa!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                // Limpia los campos
+                                LimpiarCampos();
+
+
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al conectarse a la base de datos: " + ex, "Error Mensaje",
+                       MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        finally
+                        {
+                            connect.Close();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Cancelado", "Informacion Mensaje",
+                      MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+            }
+        }
     }
 
 }
