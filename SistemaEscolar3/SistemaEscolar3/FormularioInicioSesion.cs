@@ -3,13 +3,15 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
 using System.Runtime.Remoting.Contexts;
+using System.Drawing;
 
 
 namespace SistemaEscolar3
 {
     public partial class FormularioInicioSesion : Form
     {
-        SqlConnection connect = new SqlConnection("Data Source=YHAVET\\SQLEXPRESS;Initial Catalog=Tecnica3;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-OHA95C8\\MSSQLSERVER01;Initial Catalog=TEC3;Integrated Security=True;Connect Timeout=30");
+
 
         public FormularioInicioSesion()
         {
@@ -38,7 +40,7 @@ namespace SistemaEscolar3
                 {
                     connect.Open();
 
-                    string selectData = "SELECT * FROM users WHERE username = @username AND password = @password";
+                    string selectData = "SELECT * FROM usuarios WHERE username = @username AND password = @password";
 
                   
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))

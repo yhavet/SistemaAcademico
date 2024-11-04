@@ -10,13 +10,14 @@ namespace SistemaEscolar3
 {
     class AñadirDatosDocente
     {
-        SqlConnection connect = new SqlConnection("Data Source=YHAVET\\SQLEXPRESS;Initial Catalog=Tecnica3;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-OHA95C8\\MSSQLSERVER01;Initial Catalog=TEC3;Integrated Security=True;Connect Timeout=30");
 
         public int id { set; get; }
         public string IdDocente { set; get; }
         public string NombreDocente { set; get; }
         public string GeneroDocente { set; get; }
         public string DireccionDocente { set; get; }
+        public string CiudadDocente { set; get; }
         public string ImagenesDocente { set; get; }
         public string StatusDocentes { set; get; }
         public string InsertarFecha { set; get; }
@@ -46,6 +47,7 @@ namespace SistemaEscolar3
                             addTD.NombreDocente = reader["id_docente"].ToString();
                             addTD.GeneroDocente = reader["genero_docente"].ToString();
                             addTD.DireccionDocente = reader["direccion_docente"].ToString();
+                            addTD.CiudadDocente = reader["ciudad_docente"].ToString();
                             addTD.StatusDocentes = reader["status_docente"].ToString();
                             addTD.ImagenesDocente = reader["foto_docente"].ToString();
                             addTD.InsertarFecha = reader["insertar_fecha"].ToString();

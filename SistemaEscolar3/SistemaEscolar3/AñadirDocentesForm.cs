@@ -11,7 +11,7 @@ namespace SistemaEscolar3
     public partial class AñadirDocentesForm : UserControl
     {
         // Definición de la conexión a la base de datos usando SQL Server
-        SqlConnection connect = new SqlConnection("Data Source=YHAVET\\SQLEXPRESS;Initial Catalog=Tecnica3;Integrated Security=True;Connect Timeout=30");
+        SqlConnection connect = new SqlConnection("Data Source=DESKTOP-OHA95C8\\MSSQLSERVER01;Initial Catalog=TEC3;Integrated Security=True;Connect Timeout=30");
 
         // Constructor del formulario
         public AñadirDocentesForm()
@@ -34,7 +34,9 @@ namespace SistemaEscolar3
                 }
 
                 // Consulta SQL para obtener los datos de los docentes
-                string query = "SELECT id_docente, nombre_docente, genero_docente, direccion_docente, foto_docente, status_docente, insertar_fecha FROM docentes";
+                // Incluye ciudad_docente en la consulta
+                string query = "SELECT id_docente, nombre_docente, genero_docente, direccion_docente, ciudad_docente, foto_docente, status_docente, insertar_fecha FROM docentes";
+
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connect);
 
                 // Crea una tabla para almacenar los datos
@@ -93,8 +95,8 @@ namespace SistemaEscolar3
 
                 // Insertar los datos del docente
                 string InsertarDatos = "INSERT INTO docentes " +
-                                       "(id_docente, nombre_docente, genero_docente, direccion_docente, foto_docente, status_docente, insertar_fecha) " +
-                                       "VALUES (@id_docente, @NombreDocente, @GeneroDocente, @DireccionDocente, @ImagenesDocente, @StatusDocentes, @InsertarFecha)";
+                       "(id_docente, nombre_docente, genero_docente, direccion_docente, ciudad_docente, foto_docente, status_docente, insertar_fecha) " +
+                       "VALUES (@id_docente, @NombreDocente, @GeneroDocente, @DireccionDocente, @CiudadDocente, @ImagenesDocente, @StatusDocentes, @InsertarFecha)";
 
                 string path = Path.Combine(@"C:\Directorio_Docentes\", Id_Docente.Text.Trim() + ".jpg");
                 Directory.CreateDirectory(Path.GetDirectoryName(path));
@@ -106,6 +108,7 @@ namespace SistemaEscolar3
                     cmd.Parameters.AddWithValue("@NombreDocente", NombreCompleto_docente.Text.Trim());
                     cmd.Parameters.AddWithValue("@GeneroDocente", generos_docente.Text.Trim());
                     cmd.Parameters.AddWithValue("@DireccionDocente", direccion_docente.Text.Trim());
+                    cmd.Parameters.AddWithValue("@CiudadDocente", ciudad_docente.Text.Trim());
                     cmd.Parameters.AddWithValue("@StatusDocentes", status_docente.Text.Trim());
                     cmd.Parameters.AddWithValue("@ImagenesDocente", path.Trim());
                     cmd.Parameters.AddWithValue("@InsertarFecha", DateTime.Today.ToString("yyyy-MM-dd"));
@@ -148,7 +151,7 @@ namespace SistemaEscolar3
         // Evento que se activa al hacer clic en el botón para seleccionar una imagen
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog(); 
+            OpenFileDialog open = new OpenFileDialog();
             open.Filter = "Image files (.jpg; *.png)|.jpg;*.png"; // Filtro para seleccionar solo archivos de imagen
 
             // Si el usuario selecciona un archivo, guarda la ruta y muestra la imagen en el formulario
@@ -190,14 +193,7 @@ namespace SistemaEscolar3
                         connect.Open(); // Abre la conexión
 
 
-                        DialogResult check = MessageBox.Show("Estas seguro de que quieres actualizar la identificacion del estudiante: "
-                            + Id_Docente.Text.Trim() + "?", "Confirmar mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-
-                        DialogResult Check = MessageBox.Show("¿Estás seguro que quieres actualizar esta información del docente "
-                        + Id_Docente.Text.Trim() + "?", "Confirmar mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                        DialogResult checkStudent = MessageBox.Show("¿Estás seguro de que quieres actualizar la identificación del estudiante: "
+                        DialogResult check = MessageBox.Show("Estas seguro de que quieres actualizar la identificacion del docente: "
                             + Id_Docente.Text.Trim() + "?", "Confirmar mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
 
@@ -207,11 +203,9 @@ namespace SistemaEscolar3
                         {
                             // Consulta SQL para actualizar los datos del docente
                             String UpdateData = "UPDATE docentes SET " +
-                                "nombre_docente = @NombreDocente, genero_docente = @GeneroDocente" +
-                                ", direccion_docente = @DireccionDocente, foto_docente = @ImagenesDocente " +
-                                ", status_docente = @StatusDocentes" +
-                                ", insertar_fecha = @InsertarFecha WHERE id_docente = @id_docente";
-
+                            "nombre_docente = @NombreDocente, genero_docente = @GeneroDocente, direccion_docente = @DireccionDocente, ciudad_docente = @CiudadDocente, " +
+                            "foto_docente = @ImagenesDocente, status_docente = @StatusDocentes, insertar_fecha = @InsertarFecha " +
+                            "WHERE id_docente = @id_docente";
                             // Define la ruta donde se almacenará la imagen actualizada
                             string path = Path.Combine(@"C:\Users\Yhavet\Source\Repos\yhavet\SistemaAcademico\SistemaEscolar3\SistemaEscolar3\Directorio_Docentes\", Id_Docente.Text.Trim() + ".jpg");
 
@@ -219,21 +213,22 @@ namespace SistemaEscolar3
                             using (SqlCommand cmd = new SqlCommand(UpdateData, connect))
                             {
                                 // Asigna los valores a los parámetros de la consulta
+                                cmd.Parameters.AddWithValue("@id_docente", Id_Docente.Text.Trim());
                                 cmd.Parameters.AddWithValue("@NombreDocente", NombreCompleto_docente.Text.Trim());
                                 cmd.Parameters.AddWithValue("@GeneroDocente", generos_docente.Text.Trim());
                                 cmd.Parameters.AddWithValue("@DireccionDocente", direccion_docente.Text.Trim());
+                                cmd.Parameters.AddWithValue("@CiudadDocente", ciudad_docente.Text.Trim());
                                 cmd.Parameters.AddWithValue("@StatusDocentes", status_docente.Text.Trim());
-                                cmd.Parameters.AddWithValue("@ImagenesDocente", path);
-                                cmd.Parameters.AddWithValue("@InsertarFecha", today.ToString("yyyy-MM-dd"));
-                                cmd.Parameters.AddWithValue("@id_docente", Id_Docente.Text.Trim());
+                                cmd.Parameters.AddWithValue("@ImagenesDocente", path.Trim());
+                                cmd.Parameters.AddWithValue("@InsertarFecha", DateTime.Today.ToString("yyyy-MM-dd"));
 
                                 // Ejecuta la consulta y muestra un mensaje de éxito
                                 cmd.ExecuteNonQuery();
                                 DatosVisualesDocente();
 
-                                MessageBox.Show("Datos actualizados correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("La información se actualizo de manera correcta", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                   
+
 
                                 // Limpia los campos
                                 LimpiarCampos();
@@ -273,6 +268,7 @@ namespace SistemaEscolar3
                 NombreCompleto_docente.Text = row.Cells[2].Value?.ToString() ?? string.Empty;
                 generos_docente.Text = row.Cells[3].Value?.ToString() ?? string.Empty;
                 direccion_docente.Text = row.Cells[4].Value?.ToString() ?? string.Empty;
+
                 imagePath = row.Cells[5].Value?.ToString() ?? string.Empty; // Obtiene la ruta de la imagen
 
                 string ImageData = row.Cells[5].Value?.ToString();
@@ -297,12 +293,13 @@ namespace SistemaEscolar3
 
                 // Carga los datos restantes
                 status_docente.Text = row.Cells[6].Value?.ToString() ?? string.Empty;
+                ciudad_docente.Text = row.Cells[7].Value?.ToString() ?? string.Empty;
             }
         }
 
         private void btnBorrar_docente_Click(object sender, EventArgs e)
         {
-            if(Id_Docente.Text == "")
+            if (Id_Docente.Text == "")
             {
                 MessageBox.Show("Por favor selecciona el elemento primero", "Error Mensaje",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -323,13 +320,13 @@ namespace SistemaEscolar3
                         {
                             connect.Open();
 
-                            string BorrarDatos = "UPDATE docentes SET actualizar_fecha = @ActualizarFecha " +
+                            string BorrarDatos = "UPDATE docentes SET eliminar_fecha = @eliminar_fecha " +
                                 "WHERE id_docente = @IdDocente";
 
                             using (SqlCommand cmd = new SqlCommand(BorrarDatos, connect))
 
                             {
-                                cmd.Parameters.AddWithValue("ActualizarFecha", today);
+                                cmd.Parameters.AddWithValue("eliminar_fecha", today.ToString());
                                 cmd.Parameters.AddWithValue("@IdDocente", Id_Docente.Text.Trim());
 
                                 cmd.ExecuteNonQuery();
